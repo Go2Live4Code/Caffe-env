@@ -1,0 +1,24 @@
+protoc --version
+
+https://github.com/google/protobuf/releases/download/v3.4.0/protobuf-all-3.4.0.tar.gz
+
+sudo apt-get install autoconf automake libtool curl make g++ unzip
+
+wget https://github.com/google/protobuf/archive/v3.4.0.zip
+unzip protobuf
+
+cd protobuf-3.4.0/
+./autogen.sh
+./configure
+make
+make check
+
+sudo make install
+sudo ldconfig
+
+sudo pip uninstall protobuf
+
+cd protobuf-3.4.0/python/
+python setup.py build 
+python setup.py install 
+python setup.py test
