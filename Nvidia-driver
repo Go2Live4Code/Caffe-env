@@ -1,0 +1,23 @@
+1.安装之前先卸载已经存在的驱动版本：
+   sudo apt-get remove --purge nvidia*
+
+
+2.需要禁用 nouveau，只有在禁用掉 nouveau 后才能顺利安装 NVIDIA 显卡驱动，禁用方法就是在 /etc/modprobe.d/blacklist-nouveau.conf 文件中添加一条禁用命令，首先需要打开该文件，通过以下命令打开:
+
+   sudo gedit /etc/modprobe.d/blacklist.conf
+
+输入密码后在最后一行加上:  blacklist nouveau 是将Ubuntu自带的显卡驱动加入黑名单
+
+Ctrl +C保存后注意此时还需执行以下命令使禁用 nouveau 真正生效终端输入 ： sudo update-initramfs -u 
+
+ 
+3.重启之后,这里要尤其注意，安装显卡驱动要先切换到文字界面，(按Ctrl+Alt+F1~F6).所以，启动电脑后，先进入文字界面。 然后，首先输入命令sudo service lightdm stop
+
+关闭桌面服务现在可以安装驱动了，先进入家目录 cd ~ ，然后： sudo sh ./NVIDIA-Linux-x86_64-375.20.run，按照提示一步步来完成后，再次重启电脑。
+
+安装完成之后输入以下指令进行验证： sudo nvidia-smi ，若列出了GPU的信息列表则表示驱动安装成功。如下图：
+--------------------- 
+作者：小米0921 
+来源：CSDN 
+原文：https://blog.csdn.net/u012442845/article/details/78855573?utm_source=copy 
+版权声明：本文为博主原创文章，转载请附上博文链接！
