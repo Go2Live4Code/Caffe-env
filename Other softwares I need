@@ -1,0 +1,28 @@
+https://jingyan.baidu.com/article/c74d6000bbc6110f6a595d3b.html安装tools
+
+https://blog.csdn.net/h8178/article/details/79517443更换apt源
+
+https://www.linuxidc.com/Linux/2017-11/148695.htm配置java JDK
+
+https://blog.csdn.net/qq_38683692/article/details/79868391安装pycharm
+
+所有vim指令改成vi，vi指令可以替换成gedit图像界面。
+比如，$ sudo vi /etc/profile可以写成$ sudo gedit /etc/profile。
+gedit适用于更改环境变量
+
+https://blog.csdn.net/qq_30242609/article/details/53063808下载python3
+https://www.linuxidc.com/Linux/2017-07/145453.htm下载python3.6
+https://www.jianshu.com/p/b6959d0c7353卸载python3.5
+
+https://blog.csdn.net/beijiu5854/article/details/77897767   切换python版本 update-alternatives --config python
+
+https://blog.csdn.net/qq_22186119/article/details/70325270安装python第三方库
+
+https://blog.csdn.net/luojie140/article/details/78696330    anaconda安装详解
+https://blog.csdn.net/luojie140/article/details/78696330    tensorflow安装
+
+https://blog.csdn.net/iotlpf/article/details/54175064 CUDA 安装
+
+
+https://blog.csdn.net/sxflyaway/article/details/38235811修复左侧界面
+ 
