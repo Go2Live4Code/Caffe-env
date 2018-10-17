@@ -1,0 +1,14 @@
+打开python载入caffe：
+python
+import caffe
+报错：no modle named caffe
+解决方案：
+gedit ~/.bashrc
+将：
+export PYTHONPATH=/home/usrname/caffe/python:$PYTHONPATH
+写到尾部，其中usrname改成你的用户名。
+source ~/.bashrc
+关闭并重新打开终端，如还未解决再尝试如下办法：
+增加符号链接： 
+sudo ln -s /usr/include/python2.7/ /usr/local/include/python2.7    
+sudo ln -s /usr/local/lib/python2.7/dist-packages/numpy/core/include/numpy/ /usr/local/include/python2.7/numpy
