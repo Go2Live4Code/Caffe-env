@@ -6,3 +6,4 @@ cd ~/caffe
 训练模型
 ./examples/mnist/train_lenet.sh
 如果出现错误，则需要找到lenet_solver.prototxt，lenet.prototxt修改其中的路径。
+或者sudo ./examples/mnist/train_lenet.sh
