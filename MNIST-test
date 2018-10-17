@@ -1,0 +1,8 @@
+获取数据库
+cd ~/caffe
+./data/mnist/get_mnist.sh    
+./examples/mnist/create_mnist.sh
+编辑examples/mnist文件夹下的lenet_solver.prototxt文件，将solver_mode模式从GPU改为CPU，默认是GPU则不需要改。
+训练模型
+./examples/mnist/train_lenet.sh
+如果出现错误，则需要找到lenet_solver.prototxt，lenet.prototxt修改其中的路径。
