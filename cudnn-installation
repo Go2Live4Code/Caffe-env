@@ -1,1 +1,23 @@
+建议安装cudnn7.0.5,因为此版本兼容cuda9.0
 
+下载地址：https://developer.nvidia.com/rdp/cudnn-download
+
+选择Download cuDNN v7.0.5 (Dec 5, 2017), for CUDA 9.0
+cuDNN v7.0.5 Library for Linux
+如果安装CUDA9.1，请下载for CUDA 9.1即可。
+下载完后进行解压，执行：
+cd ~/下载/cuda/include
+sudo cp cudnn.h /usr/local/cuda/include/
+cd ~/下载/cuda/lib64
+sudo cp lib* /usr/local/cuda/lib64/
+cd /usr/local/cuda/lib64/
+sudo rm -rf libcudnn.so libcudnn.so.7
+sudo ln -s libcudnn.so.7.0.5 libcudnn.so.7
+sudo ln -s libcudnn.so.7 libcudnn.so
+目的是删除旧的软连接，生成新的软衔接。
+可以打开对应的文件夹，去观察是否存在libcudnn.so，libcudnn.so.7，
+和libcudnn.so.7.0.5，没有7或7.0.5请自行修改。
+ ##lib动态链接库修改容易出错
+ 
+ 
+ 
