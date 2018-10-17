@@ -1,24 +1,34 @@
-protoc --version
+lyc@lyc-DJ-C-H310M-E-D3:~/caffe$ sudo make runtest -j8
+.build_release/tools/caffe
+.build_release/tools/caffe: error while loading shared libraries: libcublas.so.9.0: cannot open shared object file: No such file or directory
+Makefile:542: recipe for target 'runtest' failed
+make: *** [runtest] Error 127
 
-https://github.com/google/protobuf/releases/download/v3.4.0/protobuf-all-3.4.0.tar.gz
 
-sudo apt-get install autoconf automake libtool curl make g++ unzip
 
-wget https://github.com/google/protobuf/archive/v3.4.0.zip
-unzip protobuf
+https://blog.csdn.net/m0_37407756/article/details/70789271
 
-cd protobuf-3.4.0/
-./autogen.sh
-./configure
-make
-make check
+sudo cp /usr/local/cuda-9.0/lib64/libcublas.so.9.0 /usr/local/lib/libcublas.so.9.0 && sudo ldconfig
 
-sudo make install
-sudo ldconfig
+sudo cp /home/lyc/anaconda2/lib/libopencv_core.so.3.2 /usr/local/lib/libopencv_core.so.3.2 && sudo ldconfig
+前面为安装的动态关系，后面为链接启动
+sudo cp /usr/local/cuda-9.0/lib64/libopencv_imgproc.so.3.2 /usr/local/lib/libopencv_imgproc.so.3.2 && sudo ldconfig
 
-sudo pip uninstall protobuf
 
-cd protobuf-3.4.0/python/
-python setup.py build 
-python setup.py install 
-python setup.py test
+--------------------- 
+作者：向阳- 
+来源：CSDN 
+原文：https://blog.csdn.net/m0_37407756/article/details/70789271 
+版权声明：本文为博主原创文章，转载请附上博文链接！
+
+
+sudo cp /home/lyc/anaconda2/lib/libopencv_core.so.3.2 /usr/local/lib/libopencv_core.so.3.2 && sudo ldconfig
+sudo cp /home/lyc/anaconda2/lib/libopencv_imgcodecs.so.3.2 /usr/local/lib/libopencv_imgcodecs.so.3.2 && sudo ldconfig
+
+libopencv_imgcodecs.so.3.2
+
+
+sudo cp /home/lyc/下载/cuda/lib64/libcudnn.so.7 /usr/local/lib/libcudnn.so.7 && sudo ldconfig
+
+
+不用改protobuf，这个文件是解决无法找到lib文件的问题
