@@ -1,1 +1,15 @@
 https://blog.csdn.net/Dark_Miro/article/details/78355292?locationNum=9&fps=1
+https://blog.csdn.net/qianyandai/article/details/78074574
+
+https://blog.csdn.net/cfyzcc/article/details/52981852
+https://www.jianshu.com/p/157b43e069b0
+https://blog.csdn.net/Dark_Miro/article/details/78355292?locationNum=9&fps=1
+
+https://blog.csdn.net/ZhichaoDuan/article/details/79515120 重中之重
+
+lyc@lyc-DJ-C-H310M-E-D3:~/caffe$ sudo make clean [sudo] lyc 的密码： 
+lyc@lyc-DJ-C-H310M-E-D3:~/caffe$ export CPLUS_INCLUDE_PATH=/usr/include/python2.7
+lyc@lyc-DJ-C-H310M-E-D3:~/caffe$ sudo make all -j8
+
+未引用问题的解决
+https://blog.csdn.net/akadiao/article/details/79834086
