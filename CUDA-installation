@@ -1,2 +1,38 @@
+ 
 
-sudo apt-get install freeglut3-dev build-essential libx11-dev libxmu-dev libxi-dev libgl1-mesa-glx libglu1-mesa libglu1-mesa-dev 
+sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler
+
+sudo apt-get install --no-install-recommends libboost-all-dev
+
+sudo apt-get install libopenblas-dev liblapack-dev libatlas-base-dev
+
+sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev
+
+sudo apt-get install git cmake build-essential
+
+安装CUDA9.0以及所有补丁
+同N-Driver在命令行模式下安装
+sudo service lightdm stop
+
+sudo sh cuda_8.0.61_375.26_linux.run --no-opengl-libs
+
+reboot
+
+sudo gedit ~/.bashrc
+
+export PATH=/usr/local/cuda-9.0/bin:$PATH
+
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+
+source ~/.bashrc
+
+
+验证
+
+cd /usr/local/cuda-8.0/samples/1_Utilities/deviceQuery
+
+sudo make
+
+./deviceQuery
+
+
