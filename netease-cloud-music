@@ -1,0 +1,3 @@
+sudo gedit /usr/share/applications/netease-cloud-music.desktop
+
+Exec=sudo netease-cloud-music %U
