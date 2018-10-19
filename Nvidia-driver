@@ -24,3 +24,12 @@ Ctrl +C保存后注意此时还需执行以下命令使禁用 nouveau 真正生�
 
 
 建议安装390版本
+
+
+sudo gedit ~/.bashrc
+
+打开后在文件最后加入以下两行内容：
+
+export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
+
+export LD_LIBRARY_PATH=/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH 
