@@ -29,3 +29,15 @@ https://blog.csdn.net/ZhichaoDuan/article/details/79515120    ×××××××××
 
 conda install -c menpo opencv3
 https://blog.csdn.net/dcrmg/article/details/77972123
+
+
+
+https://blog.csdn.net/zw__chen/article/details/79469940
+
+使用一下两条命令：
+
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+
+conda config --set show_channel_urls yes
+
+同时需要在~/.condarc中把-defaults那行删除，这样每次安装新的软件包就会从TUNA镜像下载。
