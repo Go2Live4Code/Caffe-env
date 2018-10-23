@@ -1,2 +1,3 @@
 
-建议在anaconda环境下直接用conda install opencv xxx 安装
+ conda install -c menpo opencv3
+
