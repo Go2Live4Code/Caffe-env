@@ -38,3 +38,23 @@ sudo ldconfig
 来源：CSDN 
 原文：https://blog.csdn.net/akadiao/article/details/79834086 
 版权声明：本文为博主原创文章，转载请附上博文链接！
+
+
+
+
+
+lyc@lyc-DJ-C-H310M-E-D3:~/caffe$ sudo make runtest -j8
+.build_release/tools/caffe
+.build_release/tools/caffe: error while loading shared libraries: libcublas.so.9.0: cannot open shared object file: No such file or directory
+Makefile:542: recipe for target 'runtest' failed
+make: *** [runtest] Error 127
+
+
+
+https://blog.csdn.net/m0_37407756/article/details/70789271
+
+sudo cp /usr/local/cuda-9.0/lib64/libcublas.so.9.0 /usr/local/lib/libcublas.so.9.0 && sudo ldconfig
+
+sudo cp /home/lyc/anaconda2/lib/libopencv_core.so.3.2 /usr/local/lib/libopencv_core.so.3.2 && sudo ldconfig
+前面为安装的动态关系，后面为链接启动
+sudo cp /usr/local/cuda-9.0/lib64/libopencv_imgproc.so.3.2 /usr/local/lib/libopencv_imgproc.so.3.2 && sudo ldconfig
